@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Call:</h1>
+    <p>call() method calls a function with a given this value and arguments provided individually.it invokes a function with a specified context</p>
+    <pre>
+        var obj={
+            name:'hello',
+        }
+        function Details(a){
+            return this.name+a;
+        }
+        Details.call(obj,100)
+    </pre>
+    <h1>Apply:</h1>
+    <p>Apply method accepts an array of arguments apply invokes the function immediatly and allows you to pass in arguments as an array.</p>
+    <pre>   var obj={
+        name:'hlo',
+    }
+    function Details(a){
+        return this.name+a;
+    }
+    Details.apply(obj,[100])</pre>
+    <h1>Bind:</h1>
+    <p>Bind returns a new Function and you can invoke/call it anytime you want by invoking a function</p>
+    <pre>
+        var obj={
+            name:'hi',
+        }
+        function Details(a){
+            return this.name+a;
+        }
+        var fun = Details.bind(obj,[100])
+        fun();
+    </pre>
+    <h1>Prototype:</h1>
+    <p>Whenever we create an object or array or function, our js engine return an object to our original object.</p>
+    <script src="./index.js"></script>
+</body>
+</html>
